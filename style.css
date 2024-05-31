@@ -1,0 +1,416 @@
+body {
+    font-family: noto-sans-kr-11, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    /* color: #333; */
+}
+
+.hr-1 {
+  border: 0;
+  height: 1px;
+  width: 50%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.hr-3 {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #8c8c8c;
+}
+
+.hr-10 {
+  border: 0;
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #fff;
+}
+
+.hr-10:after {
+  content: '';
+  display: block;
+  margin-top: 2px;
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    /* padding: 20px; */
+    background-color: white;
+    /* border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+.container2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.header, .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.header img {
+    width: 100%;
+    /* border-radius: 10px; */
+}
+.content {
+    text-align: right;
+}
+.content h1 {
+    font-family: "Gowun Batang", serif;
+    font-size: 2.0em;
+    /* margin: 20px 0; */
+    text-align: right;
+
+}
+.content p {
+    font-family: "Gowun Batang", serif;
+    font-size: 1.2em;
+    /* margin: 10px 0; */
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+.details {
+    text-align: center;
+    /* margin: 20px 0; */
+}
+.details p {
+    font-family: "Gowun Batang", serif;
+    font-size: 1.3em; /* 작은 화면에서 글씨 크기 조정 */
+    margin: 5px 0;
+}
+
+.name {
+    font-family: "Gowun Batang", serif;
+    width: 100%;
+    font-size: 1.0em;
+    margin: 10px 0;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .emphasized {
+        font-family: "Gowun Batang", serif;
+        font-size: 1.5em; /* 작은 화면에서 글씨 크기 조정 */
+    }
+}
+.emphasized {
+    font-size: 1.2em; /* 글씨 크기를 더 크게 설정 */
+    font-weight: bold; /* 글씨를 굵게 설정 */
+    white-space: nowrap;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.landscape {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    grid-column: span 3;
+    justify-self: center;
+    align-self: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+    margin: 10% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+.show-account-btn {
+    width: 80%;
+    margin : 10px 10%;
+    padding : 15px 0;
+    font-family: "Gowun Batang", serif;
+    font-size: 1em;
+    border-radius: 30px;
+    border-width: 0.1px;
+}
+.account-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.account-modal-content {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+.account-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+    box-sizing: border-box;
+    margin : 0 0 3px 0
+}
+.account-container p {
+    height: 100%;
+    text-align: left;
+    font-family: "Gowun Batang", serif;
+    margin : 0;
+    padding : 0;
+    font-size: 1em;
+}
+
+.copy-btn {
+    height: 100%;
+    font-family: "Gowun Batang", serif;
+    font-size: 0.7em;
+}
+
+.account-info {
+    margin-bottom: 20px;
+}
+.aacount {
+    text-align: center;
+    margin: 20px 0;
+}
+.aacount p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.account-detail p {
+    width: 100%;
+    font-family: "Gowun Batang", serif;
+    text-align: left;
+    margin : 0;
+    padding : 0;
+    font-size: 0.9em;
+}
+
+.accont-close-button {
+    width: 100%;
+    border-radius: 10px;
+    margin : 15px 0 0 0 
+}
+.close, .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+.close {
+    top: 15px;
+    right: 35px;
+    transform: none;
+}
+.close2{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    top: 15px;
+    right: 35px;
+    transform: none;
+}
+
+.prev {
+    left: 20px;
+}
+.next {
+    right: 20px;
+}
+.calendar {
+    margin-top: 20px;
+    text-align: center;
+}
+.time {
+    width: 80%;
+    height: 100%;
+    font-size: 1em;
+    text-align: right;
+    margin: 0;
+    font-family: "Gowun Batang", serif;
+}
+.month {
+    width: 10%;
+    height: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+}
+.november {
+    width: 10%;
+    height: 100%;
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+    font-family: "Gowun Batang", serif;
+    padding: 0px 0px 15px 0px;
+}
+
+.calendar p {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    font-family: "Gowun Batang", serif;
+
+}
+.calendar img {
+    width: 100%;
+}
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.week {
+    border-right : none;
+    border-left : none;
+    border-top : 1px solid #ddd;
+    border-bottom : 1px solid #ddd;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+    padding: 10px;
+    font-family: "Gowun Batang", serif;
+}
+.sunday {
+    border-right : none;
+    border-left : none;
+    border-top : 1px solid #ddd;
+    border-bottom : 1px solid #ddd;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+    padding: 10px;
+    color: red;
+    font-family: "Gowun Batang", serif;
+}
+.calendar th, .calendar td {
+    border-right : none;
+    border-left : none;
+    border-top : none;
+    border-bottom : none;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+    padding: 10px;
+    font-family: "Gowun Batang", serif;
+}
+.circle {
+    position: relative;
+    color:red;
+    z-index: 1;
+}
+
+
+.location {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    /* border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.location img {
+    font-family: "Gowun Batang", serif;
+    width: 90%;
+    margin : 5%;
+}
+
+.location2 {
+    text-align: center;
+    font-size: 1em;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    font-family: "Gowun Batang", serif;
+}
+
+.location3 {
+    width: 100%;
+    font-size: 0.8em;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    text-align: left;
+    font-family: "Gowun Batang", serif;
+}
+
+.location4 {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Gowun Batang", serif;
+}
+
+.location p {
+    font-size: 1em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.title {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Gowun Batang", serif;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.contact {
+    font-family: "Gowun Batang", serif;
+    text-align: center;
+    margin:20px;
+}
+.contact-contents {
+    font-family: "Gowun Batang", serif;
+    margin: 5px;
+}
+.contact img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+.contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
