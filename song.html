@@ -85,8 +85,8 @@
         <br>
         <br>
         <br>
-        <br>
-        <br>
+        <p class="title">Contact</p>
+        <hr class="hr-1"/>
         <br>
         <br>
         <br>
@@ -166,13 +166,6 @@
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
         <br>
@@ -473,9 +466,10 @@
             zoom: 16, //지도의 초기 줌 레벨
             minZoom: 8, //지도의 최소 줌 레벨
             zoomControl: false, //줌 컨트롤의 표시 여부
-    });
+            draggable:false,
+        });
         var marker = new naver.maps.Marker({
-            position: new naver.maps.LatLng(37.50180355734507, 126.98714909796672),
+            position: new naver.maps.LatLng(37.2775552, 127.0362438),
             map: map
         });        
     </script>
