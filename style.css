@@ -348,6 +348,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
+.map {
+    width: 80%;
+    margin: 10%;
+    height: 300px;
+}
+
 .location img {
     font-family: "Gowun Batang", serif;
     width: 90%;
