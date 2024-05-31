@@ -350,7 +350,7 @@ body {
 
 .map {
     width: 80%;
-    margin: 10%;
+    margin: auto;
     height: 300px;
 }
 
