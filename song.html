@@ -316,20 +316,6 @@
         <br>
         <br>
         <br>
-        <div class="container">
-            <section class="section" id="section-3">
-                <h1>오시는 길</h1>
-                <div id="map" style="width: 70%; height: 300px; margin:auto"></div>
-                <code id="snippet" class="snippet"></code>
-            </section>
-          </div>
-          
-          <!-- 각자 발급받은 Client ID 값 넣기 -->
-          <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ccseqeb3oq"></script>
-              <script id="code">
-                var mapDiv = document.getElementById('map');
-                var map = new naver.maps.Map(mapDiv);
-          </script>
         <br>
         <br>
         <br>
@@ -355,9 +341,12 @@
             <br>
             <br>
             <br>
-            <a href="https://naver.me/Goz5OMre">
+            <div id="map" class="map"></div>
+            <code id="snippet" class="snippet"></code>
+
+            <!-- <a href="https://naver.me/Goz5OMre">
                 <img src="./img/map.png">
-            </a>
+            </a> -->
             <br>
             <br>
             <p>대중 교통 안내</p>
@@ -451,6 +440,22 @@
     </div>
 
     </div>
+
+    <!-- 각자 발급받은 Client ID 값 넣기 -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ccseqeb3oq"></script>
+    <script id="code">
+         var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.50180355734507, 126.98714909796672), //지도의 초기 중심 좌표
+            zoom: 17, //지도의 초기 줌 레벨
+            minZoom: 8, //지도의 최소 줌 레벨
+            zoomControl: false, //줌 컨트롤의 표시 여부
+        });
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.50180355734507, 126.98714909796672),
+            map: map
+        });        
+    </script>
+
 
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
