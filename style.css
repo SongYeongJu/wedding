@@ -371,7 +371,7 @@ body {
 }
 
 .naver-map {
-    width: 90%;
+    width: 100%;
     margin: auto;
     height: 500px;
 }
@@ -385,14 +385,14 @@ body {
 .location2 {
     text-align: center;
     font-size: 1em;
-    white-space: nowrap; /* 줄바꿈 방지 */
+    /* white-space: nowrap; */
     font-family: "Gowun Batang", serif;
 }
 
 .location3 {
     width: 100%;
     font-size: 0.8em;
-    white-space: nowrap; /* 줄바꿈 방지 */
+    /* white-space: nowrap; */
     text-align: left;
     font-family: "Gowun Batang", serif;
 }
