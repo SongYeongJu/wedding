@@ -402,7 +402,6 @@ body {
     font-weight: lighter;
     text-align: left;
     font-family: "Gowun Batang", serif;
-    white-space: nowrap; /* 줄바꿈 방지 */
     color: #8c8c8c;
 }
 
