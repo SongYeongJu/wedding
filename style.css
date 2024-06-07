@@ -2,9 +2,13 @@ body {
     font-family: noto-sans-kr-11, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: #F4EBE7;
     align-items: center;
     /* color: #333; */
+}
+
+.theme-color { 
+    background-color: white;
 }
 
 .hr-1 {
@@ -14,10 +18,17 @@ body {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
+.hr-2 {
+    width: 50%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid #8c8c8c;
+  }
+  
 .hr-3 {
   border: 0;
   height: 0;
-  border-top: 1px solid #8c8c8c;
+  border-top: 1px solid #F8C8C4;
 }
 
 .hr-10 {
@@ -37,11 +48,8 @@ body {
 .container {
     max-width: 600px;
     margin: 0 auto;
-    /* padding: 20px; */
-    background-color: white;
-    /* border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     align-items: center;
+    background-color: white;
 }
 .container2{
     display: flex;
@@ -54,7 +62,6 @@ body {
 .header, .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: white;
     margin-bottom: 20px;
 }
 .header img {
@@ -62,15 +69,39 @@ body {
     /* border-radius: 10px; */
 }
 .content {
-    text-align: right;
+    text-align: center;
 }
 .content h1 {
     font-family: "Gowun Batang", serif;
     font-size: 1.5em;
     /* margin: 20px 0; */
-    text-align: right;
-    padding: 0 10px;
+    text-align: center;
+}
+.title-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.title-name h1 {
+    font-family: "Gowun Batang", serif;
+    font-size: 1.5em;
+    text-align: center;
+    width: 20%;
+}
+.title-name-time {
+    width: 20%;
+}
 
+.title-location {
+    font-family: "Gowun Batang", serif;
+    font-size: 1em;
+    text-align: center;
+}
+.title-time {
+    font-family: "Gowun Batang", serif;
+    font-size: 0.7em;
+    text-align: center;
 }
 .content p {
     font-family: "Gowun Batang", serif;
@@ -86,7 +117,7 @@ body {
 .details p {
     font-family: "Gowun Batang", serif;
     font-size: 1.0em; /* 작은 화면에서 글씨 크기 조정 */
-    margin: 5px 0;
+    margin: 15px 0;
 }
 
 .name {
@@ -108,6 +139,60 @@ body {
     font-weight: bold; /* 글씨를 굵게 설정 */
     white-space: nowrap;
 }
+.countdown {
+    font-size: 1em;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    width: 70%;
+    margin: 0 15%
+}
+.countdown-message {
+    font-size: 1em;
+    color: gray;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family: "Gowun Batang", serif;
+    font-weight: bold;
+    width: 100%;
+    justify-content: center;
+}
+.counter-point{
+    color: #F69B94;
+    margin : 0 10px
+}
+.counter-colon {
+    color: #F69B94;
+}
+.counter-box {
+    font-size: 1em;
+    background-color: #F8C8C4;
+    border-radius: 10px;
+    padding: 20px 0px;
+    width: 15%; 
+    margin: 5%;
+    align-items: center;
+}
+.counter {
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+    font-family: "Gowun Batang", serif;
+    color: #f69494;
+    font-weight: bold;
+}
+
+.counter-tag {
+    width: 100%;
+    font-size: 0.5em;
+    text-align: center;
+    align-items: center;
+    font-family: "Gowun Batang", serif;
+    color: #F69B94;
+    font-weight: bold;
+}
 
 .gallery {
     width: 95%;
@@ -120,7 +205,7 @@ body {
 
 .image-container {
     width: 100%; /* 원하는 정사각형 크기로 설정 */
-    height: auto; /* 원하는 정사각형 크기로 설정 */
+    height: 300px; /* 원하는 정사각형 크기로 설정 */
     overflow: hidden; /* 이미지를 잘라내기 위해 숨김 처리 */
     display: flex; /* Flexbox를 사용하여 자식 요소 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
@@ -160,12 +245,18 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
 }
 .modal-content {
     margin: 10% auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 700px;    
+    position: absolute;
+    top: 45%;
+    left : 50%;
+    transform: translate(-50%, -50%);
 }
 .show-account-btn {
     width: 80%;
@@ -175,6 +266,10 @@ body {
     font-size: 1em;
     border-radius: 30px;
     border-width: 0.1px;
+    background-color: #FFD9D6;
+    border-color: #FCD1D3;
+    color: #F69B94;
+    font-weight: bold;
 }
 .account-modal {
     display: none;
@@ -201,7 +296,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 20px;
+    height: 30px;
     box-sizing: border-box;
     margin : 0 0 3px 0
 }
@@ -212,12 +307,18 @@ body {
     margin : 0;
     padding : 0;
     font-size: 1em;
+    font-weight: bold;
 }
 
 .copy-btn {
     height: 100%;
     font-family: "Gowun Batang", serif;
     font-size: 0.7em;
+    padding : 5px;
+    border-radius: 5px;
+    background-color: #FFD9D6;
+    border-color: transparent;
+    color: #a46661;
 }
 
 .account-info {
@@ -243,7 +344,10 @@ body {
 .accont-close-button {
     width: 100%;
     border-radius: 10px;
-    margin : 15px 0 0 0 
+    margin : 15px 0 0 0;
+    background-color: #FFD9D6;
+    border-color: transparent;
+    color: #a46661;
 }
 .close, .prev, .next {
     position: absolute;
@@ -281,33 +385,25 @@ body {
     right: 20px;
 }
 .calendar {
-    margin-top: 20px;
-    text-align: center;
-}
-.time {
     width: 80%;
-    height: 100%;
-    font-size: 1em;
-    text-align: right;
-    margin: 0;
-    font-family: "Gowun Batang", serif;
+    margin-top: 20px;
+    margin: 20px 10%;
+    text-align: center;
+    align-items: center;
 }
-.month {
-    width: 10%;
-    height: 100%;
+.day {
+    width: 100%;
     font-size: 1.5em;
     text-align: center;
-    padding: 0px 0px 0px 0px;
-    margin: 0;
+    font-family: "Gowun Batang", serif;
+    color: #F69B94;
 }
-.november {
-    width: 10%;
-    height: 100%;
+.time {
+    width: 100%;
     font-size: 1em;
     text-align: center;
-    margin: 0 5px 0 0;
     font-family: "Gowun Batang", serif;
-    padding: 0px 5px 15px 5px;
+    color: #F69B94;
 }
 
 .calendar p {
@@ -329,50 +425,34 @@ body {
 .week {
     border-right : none;
     border-left : none;
-    border-top : 1px solid #ddd;
+    /* border-top : 1px solid #ddd;
     border-bottom : 1px solid #ddd;
-    /* border: 1px solid #ddd; */
+    border: 1px solid #ddd; */
     text-align: center;
     padding: 10px;
     font-family: "Gowun Batang", serif;
 }
 .sunday {
-    border-right : none;
-    border-left : none;
-    border-top : 1px solid #ddd;
-    border-bottom : 1px solid #ddd;
-    /* border: 1px solid #ddd; */
     text-align: center;
     padding: 10px;
-    color: red;
+    color: #F69B94;
     font-family: "Gowun Batang", serif;
+    font-weight: bold;
 }
 .calendar th, .calendar td {
-    border-right : none;
-    border-left : none;
-    border-top : none;
-    border-bottom : none;
-    /* border: 1px solid #ddd; */
     text-align: center;
     padding: 10px;
     font-family: "Gowun Batang", serif;
+    font-weight: bold;
 }
 .circle {
     position: relative;
-    color:red;
+    color: #F69B94;
     z-index: 1;
 }
 
-
 .location {
     width: 100%;
-    /* max-width: 600px;
-    margin: 20px auto;
-    padding: 20px; */
-    background-color: #fff;
-    
-    /* border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .naver-map {
@@ -392,6 +472,7 @@ body {
     font-size: 1em;
     text-align: left;
     font-weight: bold;
+    font-family: "Gowun Batang", serif;
     padding : 0% 5%
 }
 
@@ -421,17 +502,26 @@ body {
 
 .location4 {
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
     font-family: "Gowun Batang", serif;
 }
 
 .title {
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1.4em;
     text-align: center;
     font-weight: bold;
     font-family: "Gowun Batang", serif;
+    color: #F69B94;
+}
+.sub-title {
+    width: 100%;
+    font-size: 0.6em;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Gowun Batang", serif;
+    color: #F8C8C4;
 }
 
 .contact-container {
@@ -480,8 +570,8 @@ body {
 .form-group button {
     width:  100%;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #FFD9D6;
+    border-color: #FCD1D3;
     border: none;
     border-radius: 5px;
     cursor: pointer;
