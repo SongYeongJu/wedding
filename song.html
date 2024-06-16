@@ -11,29 +11,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Gowun+Batang&family=Nanum+Brush+Script&family=Song+Myung&display=swap" rel="stylesheet">
 
     <link rel="preload" as="image" href="./img/title.jpg">
-    <link rel="preload" as="image" href="./img/1.jpg">
-    <link rel="preload" as="image" href="./img/2.jpg">
-    <link rel="preload" as="image" href="./img/3.jpg">
-    <link rel="preload" as="image" href="./img/4.jpg">
-    <link rel="preload" as="image" href="./img/5.jpg">
-    <link rel="preload" as="image" href="./img/6.jpg">
-    <link rel="preload" as="image" href="./img/7.jpg">
-    <link rel="preload" as="image" href="./img/8.jpg">
-    <link rel="preload" as="image" href="./img/9.jpg">
-    <link rel="preload" as="image" href="./img/10.jpg">
-    <link rel="preload" as="image" href="./img/11.jpg">
-    <link rel="preload" as="image" href="./img/12.jpg">
-    <link rel="preload" as="image" href="./img/13.jpg">
-    <link rel="preload" as="image" href="./img/14.jpg">
-    <link rel="preload" as="image" href="./img/15.jpg">
-    <link rel="preload" as="image" href="./img/16.jpg">
-    <link rel="preload" as="image" href="./img/17.jpg">
-    <link rel="preload" as="image" href="./img/18.jpg">
+    <link rel="preload" as="image" href="./img/title2.jpg">
+    <link rel="preload" as="image" href="./img/prev/1.jpg">
+    <link rel="preload" as="image" href="./img/prev/2.jpg">
+    <link rel="preload" as="image" href="./img/prev/3.jpg">
+    <link rel="preload" as="image" href="./img/prev/4.jpg">
+    <link rel="preload" as="image" href="./img/prev/5.jpg">
+    <link rel="preload" as="image" href="./img/prev/6.jpg">
+    <link rel="preload" as="image" href="./img/prev/7.jpg">
+    <link rel="preload" as="image" href="./img/prev/8.jpg">
+    <link rel="preload" as="image" href="./img/prev/9.jpg">
+    <link rel="preload" as="image" href="./img/prev/10.jpg">
+    <link rel="preload" as="image" href="./img/prev/11.jpg">
+    <link rel="preload" as="image" href="./img/prev/12.jpg">
+    <link rel="preload" as="image" href="./img/prev/13.jpg">
+    <link rel="preload" as="image" href="./img/prev/14.jpg">
+    <link rel="preload" as="image" href="./img/prev/15.jpg">
+    <link rel="preload" as="image" href="./img/prev/16.jpg">
+    <link rel="preload" as="image" href="./img/prev/17.jpg">
+    <link rel="preload" as="image" href="./img/prev/18.jpg">
+    <link rel="preload" as="image" href="./img/prev/19.jpg">
+    <link rel="preload" as="image" href="./img/prev/20.jpg">
+    <link rel="preload" as="image" href="./img/prev/21.jpg">
+    <link rel="preload" as="image" href="./img/prev/22.jpg">
+    <link rel="preload" as="image" href="./img/prev/23.jpg">
+    <link rel="preload" as="image" href="./img/prev/24.jpg">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="./img/title.jpg" alt="결혼식 이미지">
+            <img src="./img/title2.jpg" alt="결혼식 이미지">
         </div>
         <br>
         <div class="content">
@@ -641,30 +648,30 @@
     <script>
         const gallery = document.getElementById('gallery');
         const my_images = [
-            "./img/1.jpg",
-            "./img/2.jpg",
-            "./img/3.jpg",
-            "./img/4.jpg",
-            "./img/5.jpg",
-            "./img/6.jpg",
-            "./img/7.jpg",
-            "./img/8.jpg",
-            "./img/9.jpg",
-            "./img/10.jpg",
-            "./img/11.jpg",
-            "./img/12.jpg",
-            "./img/13.jpg",
-            "./img/14.jpg",
-            "./img/15.jpg",
-            "./img/16.jpg",
-            "./img/17.jpg",
-            "./img/18.jpg",
-            "./img/19.jpg",
-            "./img/20.jpg",
-            "./img/21.jpg",
-            "./img/22.jpg",
-            "./img/23.jpg",
-            "./img/24.jpg",
+            "./img/prev/1.jpg",
+            "./img/prev/2.jpg",
+            "./img/prev/3.jpg",
+            "./img/prev/4.jpg",
+            "./img/prev/5.jpg",
+            "./img/prev/6.jpg",
+            "./img/prev/7.jpg",
+            "./img/prev/8.jpg",
+            "./img/prev/9.jpg",
+            "./img/prev/10.jpg",
+            "./img/prev/11.jpg",
+            "./img/prev/12.jpg",
+            "./img/prev/13.jpg",
+            "./img/prev/14.jpg",
+            "./img/prev/15.jpg",
+            "./img/prev/16.jpg",
+            "./img/prev/17.jpg",
+            "./img/prev/18.jpg",
+            "./img/prev/19.jpg",
+            "./img/prev/20.jpg",
+            "./img/prev/21.jpg",
+            "./img/prev/22.jpg",
+            "./img/prev/23.jpg",
+            "./img/prev/24.jpg",
         ];
                 
         function createGalleryItem(src, index) {
@@ -673,6 +680,7 @@
             const img = document.createElement('img');
             img.src = src;
             img.alt = `이미지 ${index + 1}`;
+            img.loading="lazy";
             img.onclick = () => openModal(index);
             div.appendChild(img);
             return div;
