@@ -181,7 +181,7 @@ body {
     font-size: 1em;
     background-color: #F8C8C4;
     border-radius: 10px;
-    padding: 20px 0px;
+    padding: 10px 0px;
     width: 15%; 
     margin: 5%;
     align-items: center;
@@ -416,9 +416,9 @@ body {
     right: 20px;
 }
 .calendar {
-    width: 80%;
+    width: 60%;
     margin-top: 20px;
-    margin: 20px 10%;
+    margin: 20px 20%;
     text-align: center;
     align-items: center;
 }
