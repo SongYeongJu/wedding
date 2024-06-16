@@ -242,13 +242,17 @@ body {
     object-fit: cover; /* 이미지 크롭 및 커버 설정 */
 }
 .show-more-button {
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: block;
+    width: 80%;
+    margin : 10px 10%;
+    padding : 10px 0;
+    font-family: "Gowun Batang", serif;
+    font-size: 1em;
+    border-radius: 30px;
+    border-width: 0.1px;
+    background-color: #FFD9D6;
+    border-color: #FCD1D3;
+    color: #F69B94;
+    font-weight: bold;
 }
 /* .gallery img {
     width: 100%;

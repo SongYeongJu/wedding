@@ -295,9 +295,8 @@
             <p class="sub-title">G A L L E R Y</p>
             <p class="title">갤러리</p>
             <br>
-            <div class="gallery" id="gallery">
-            </div>        
-            <!-- <button class="show-more-button">더보기</button> -->
+            <div class="gallery" id="gallery"></div>        
+            <button class="show-more-button" id="show_btn" onclick="show_more_img()">더보기</button>
             <br>
             <br>
             <br>
@@ -644,58 +643,6 @@
     <script src="./accounthandler.js"></script>
     <script src="./imagehandler.js"></script>
     <script src="./countdownhandler.js"></script>
-    <!-- <script src="./messagehandler.js"></script> -->
-    <script>
-        const gallery = document.getElementById('gallery');
-        const my_images = [
-            "./img/prev/1.jpg",
-            "./img/prev/2.jpg",
-            "./img/prev/3.jpg",
-            "./img/prev/4.jpg",
-            "./img/prev/5.jpg",
-            "./img/prev/6.jpg",
-            "./img/prev/7.jpg",
-            "./img/prev/8.jpg",
-            "./img/prev/9.jpg",
-            "./img/prev/10.jpg",
-            "./img/prev/11.jpg",
-            "./img/prev/12.jpg",
-            "./img/prev/13.jpg",
-            "./img/prev/14.jpg",
-            "./img/prev/15.jpg",
-            "./img/prev/16.jpg",
-            "./img/prev/17.jpg",
-            "./img/prev/18.jpg",
-            "./img/prev/19.jpg",
-            "./img/prev/20.jpg",
-            "./img/prev/21.jpg",
-            "./img/prev/22.jpg",
-            "./img/prev/23.jpg",
-            "./img/prev/24.jpg",
-        ];
-                
-        function createGalleryItem(src, index) {
-            const div = document.createElement('div');
-            div.className = 'image-container';
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = `이미지 ${index + 1}`;
-            img.loading="lazy";
-            img.onclick = () => openModal(index);
-            div.appendChild(img);
-            return div;
-        }
-
-        function loadImages() {
-            my_images.forEach((src, index) => {
-                const galleryItem = createGalleryItem(src, index);
-                gallery.appendChild(galleryItem);
-            });
-        }
-        loadImages();
-      
-    </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
