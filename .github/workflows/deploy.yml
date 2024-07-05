@@ -25,7 +25,7 @@ jobs:
         API_KEY: ${{ secrets.API_KEY }}
         
     # //env파일에 추가해준다.
-      run: |
+      run: 
         echo "VITE_API_KEY=${API_KEY}" >> .env
         echo "API_KEY=${{secrets.API_KEY}}" > .env
         ls .env
