@@ -19,12 +19,12 @@ jobs:
         ls
         cat config.js
 
-    //환경변수 설정.env파일을 만들고,GithubSecrets의 변수를 등록하고
+    # //환경변수 설정.env파일을 만들고,GithubSecrets의 변수를 등록하고
     - name: Set Environment Variables
       env:
         VITE_API_KEY: ${{ secrets.API_KEY }}
         
-    //env파일에 추가해준다.
+    # //env파일에 추가해준다.
       run: |
         echo "VITE_API_KEY=${API_KEY}" >> .env
 
