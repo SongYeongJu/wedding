@@ -1,26 +1,15 @@
-name: Deploy to GitHub Pages
+name: Environment - Secrets
 
-on:
-  push:
-    branches:
-      - main
+on: workflow_dispatch
 
 jobs:
-  build:
+  secrets:
+    environment: Test
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Create config.js
-      run: |
-        echo "const API_KEY = '${{ secrets.API_KEY }}';" > config.js
-        ls ..
-        ls
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+      - name: Access Secrets
+        run: |
+          echo "Secret Token : ${{ secrets.API_KEY }}" > config.js
+          cat config.js
+          
