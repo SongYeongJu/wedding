@@ -15,7 +15,9 @@ jobs:
 
     - name: Create config.js
       run: |
-        echo "const API_KEY = '${{ secrets.API_KEY }}';"
+        echo "const API_KEY = '${{ secrets.API_KEY }}';" > config.js
+        ls ..
+        ls
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
