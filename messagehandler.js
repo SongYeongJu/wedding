@@ -1,3 +1,4 @@
+console.log("test");
 fetch('config.json')
     .then(response => response.json())
     .then(config => {
@@ -6,7 +7,7 @@ fetch('config.json')
         // Your code that uses the API key goes here
     })
     .catch(error => console.error('Error:', error));
-    
+
 
 // Firebase 설정
 const firebaseConfig = {
