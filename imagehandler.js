@@ -64,7 +64,7 @@ function openModal(index) {
     modalImg = document.getElementById('modalImg');
     // images = document.querySelectorAll('.gallery img');
     // modalImg.src = images[index].src;
-    modalImg.src = original_images[index];
+    modalImg.src = my_images[index];
     currentIndex = index;
 }
 
@@ -75,11 +75,19 @@ function closeModal() {
 function changeImage(direction) {
     currentIndex += direction;
     if (currentIndex < 0) {
-        currentIndex = original_images.length - 1;
-    } else if (currentIndex >= original_images.length) {
+        currentIndex = my_images.length - 1;
+    } else if (currentIndex >= my_images.length) {
         currentIndex = 0;
     }
-    modalImg.src = original_images[currentIndex];
+    modalImg.src = my_images[currentIndex];
+
+    // currentIndex += direction;
+    // if (currentIndex < 0) {
+    //     currentIndex = original_images.length - 1;
+    // } else if (currentIndex >= original_images.length) {
+    //     currentIndex = 0;
+    // }
+    // modalImg.src = original_images[currentIndex];
 }
 
 document.addEventListener('keydown', function(event) {
