@@ -6,34 +6,30 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      # - name: Cache node modules
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: node_modules
-      #     key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-      #     restore-keys: ${{ runner.os }}-npm-
+    - name: Create config.js
+      run: |
+        echo "const API_KEY = '${{ secrets.API_KEY }}';" > config.js
+        ls
+        cat config.js
 
-      # - name: Install dependencies
-      #   run: npm ci
+    //환경변수 설정.env파일을 만들고,GithubSecrets의 변수를 등록하고
+    - name: Set Environment Variables
+      env:
+        VITE_API_KEY: ${{ secrets.API_KEY }}
+        
+    //env파일에 추가해준다.
+      run: |
+        echo "VITE_API_KEY=${API_KEY}" >> .env
 
-      - name: Set environment variables
-        run: |
-          echo "VITE_API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
-          ls -l $GITHUB_ENV
-          cat $GITHUB_ENV
-
-      - name: Building apps
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
