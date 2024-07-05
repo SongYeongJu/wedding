@@ -1,4 +1,14 @@
-  // Firebase 설정
+fetch('config.json')
+    .then(response => response.json())
+    .then(config => {
+        const apiKey = config.API_KEY;
+        console.log("API Key: ", apiKey);
+        // Your code that uses the API key goes here
+    })
+    .catch(error => console.error('Error:', error));
+    
+
+// Firebase 설정
 const firebaseConfig = {
     apiKey: "AIzaSyAO5otW2ZDcIwA2N9GpultxVxNSDPldX2c",
     authDomain: "wedding-70500.firebaseapp.com",
@@ -7,6 +17,8 @@ const firebaseConfig = {
     messagingSenderId: "597120579016",
     appId: "1:597120579016:web:0b1f47f82714f4092abcfd"
 };
+
+
 
 // Firebase 초기화
 
