@@ -1,12 +1,12 @@
 console.log("test");
-fetch('config.json')
-    .then(response => response.json())
-    .then(config => {
-        const apiKey = config.API_KEY;
-        console.log("API Key: ", apiKey);
-        // Your code that uses the API key goes here
-    })
-    .catch(error => console.error('Error:', error));
+// fetch('config.json')
+//     .then(response => response.json())
+//     .then(config => {
+//         const apiKey = config.API_KEY;
+//         console.log("API Key: ", apiKey);
+//         // Your code that uses the API key goes here
+//     })
+//     .catch(error => console.error('Error:', error));
 
 
 // Firebase 설정
