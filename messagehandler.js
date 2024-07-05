@@ -1,4 +1,7 @@
-console.log("test");
+require('dotenv').config();
+const jamong_key = process.env.API_KEY;
+console.log("test : ", jamong_key);
+
 // fetch('config.json')
 //     .then(response => response.json())
 //     .then(config => {
