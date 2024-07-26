@@ -1,37 +1,37 @@
-name: Deploy to GitHub Pages
+# name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v2
 
-    - name: Create config.js
-      run: |
-        echo "const API_KEY = '${{ secrets.API_KEY }}';" > config.js
-        ls
-        cat config.js
+#     - name: Create config.js
+#       run: |
+#         echo "const API_KEY = '${{ secrets.API_KEY }}';" > config.js
+#         ls
+#         cat config.js
 
-    # //환경변수 설정.env파일을 만들고,GithubSecrets의 변수를 등록하고
-    - name: Set Environment Variables
-      env:
-        API_KEY: ${{ secrets.API_KEY }}        
-    # //env파일에 추가해준다.
-      run: |
-        echo "VITE_API_KEY=${API_KEY}" >> .env
-        echo "API_KEY=${{secrets.API_KEY}}" >> .env
-        ls .env
-        cat .env
+#     # //환경변수 설정.env파일을 만들고,GithubSecrets의 변수를 등록하고
+#     - name: Set Environment Variables
+#       env:
+#         API_KEY: ${{ secrets.API_KEY }}        
+#     # //env파일에 추가해준다.
+#       run: |
+#         echo "VITE_API_KEY=${API_KEY}" >> .env
+#         echo "API_KEY=${{secrets.API_KEY}}" >> .env
+#         ls .env
+#         cat .env
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+#     - name: Deploy to GitHub Pages
+#       uses: peaceiris/actions-gh-pages@v3
+#       with:
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
+#         publish_dir: ./
