@@ -483,6 +483,52 @@ body {
     z-index: 1;
 }
 
+.heart {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #F69B94;
+    transform: rotate(-45deg);
+    margin: 5px auto auto auto;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color:  #F69B94;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 10px;
+}
+
+/* 숫자 3을 하트 위에 보이게 설정 */
+.heart-container {
+    position: relative;
+    text-align: center;
+}
+
+.heart-container .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    z-index: 1; /* 하트보다 앞에 보이도록 설정 */
+}
+
+
 .location {
     width: 100%;
 }
@@ -645,3 +691,4 @@ body {
     cursor: pointer;
     user-select: none;
 }
+

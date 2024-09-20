@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar with Heart and Number</title>
+    <style>
+        /* 하트 모양 */
+        .heart {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            transform: rotate(-45deg);
+            margin: 0 auto;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -15px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 15px;
+        }
+
+        /* 숫자 3을 하트 위에 보이게 설정 */
+        .heart-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .heart-container .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            z-index: 1; /* 하트보다 앞에 보이도록 설정 */
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .sunday {
+            color: red;
+        }
+
+        .week th {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar">
+        <table>
+            <thead class="week">
+                <tr>
+                    <th class="sunday">일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <!-- 하트와 숫자를 포함하는 셀 -->
+                    <td class="heart-container">
+                        <div class="heart"></div>
+                        <div class="number">3</div>
+                    </td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td class="sunday">10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td class="sunday">17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td class="sunday">24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+    </div>
+</body>
+</html>
